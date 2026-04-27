@@ -1,90 +1,137 @@
+/* ===== IMPORTAÇÃO DE FONTE FOFA ===== */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+/* ===== RESET BÁSICO ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
 
-  picture img {
-  display: block;
-  margin: 200px auto;
-  max-width: 100%;
-}
-}
- 
 body {
- 
-
-  font-family: Georgia, sans-serif;
-  background-color: #DDC38A;
-  color: #86531A;
+  font-family: 'Quicksand', Georgia, sans-serif;
+  background-color: #FDF5E6;          /* tom creme clarinho */
+  color: #6B4F4F;                     /* marrom suave */
   line-height: 1.6;
+  padding: 0;
 }
 
+/* ===== MENU SUPERIOR ===== */
 nav {
-  background-color: #8F7832;
+  background-color: #E6C9A8;          /* bege rosado */
   padding: 15px 30px;
+  border-bottom: 4px solid #D4A373;   /* borda inferior fofa */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
-  color: white;
+  color: #6B4F4F;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
+  padding: 8px 18px;
+  /* Borda arredondada + fundo suave */
+  background-color: #FAEDCD;
+  border: 2px solid #D4A373;
+  border-radius: 30px;               /* bem redondinho */
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 nav ul li a:hover {
-  color: #ffd166;
+  background-color: #FEFAE0;
+  border-color: #BC6C25;
+  color: #BC6C25;
+  transform: scale(1.05);            /* efeito de crescimento */
+  box-shadow: 0 4px 12px rgba(188, 108, 37, 0.2);
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #FFFFFF;
+  border: 3px solid #E6C9A8;
+  border-radius: 30px;              /* bem arredondado */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* ===== TÍTULOS ===== */
+h1, h2 {
+  text-align: center;
+  color: #BC6C25;
+  margin: 20px 0;
+  font-weight: 700;
 }
 
 h1 {
-  text-align: center;
-  margin: 30px 0 20px;
-  color: #A37800;
+  font-size: 2rem;
+  border-bottom: 3px dotted #D4A373;  /* linha pontilhada decorativa */
+  display: inline-block;
+  padding-bottom: 8px;
 }
 
+h2 {
+  font-size: 1.3rem;
+}
+
+/* ===== PARÁGRAFOS ===== */
 p {
   max-width: 800px;
   margin: 0 auto 20px;
-  padding: 0 20px;
-  font-size: 18px;
+  padding: 15px 20px;
+  font-size: 1.05rem;
+  background-color: #FEFAE0;
+  border-left: 6px solid #E6C9A8;    /* faixa lateral fofa */
+  border-radius: 0 20px 20px 0;      /* arredondado só do lado direito */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
+/* ===== LISTAS ===== */
 ul {
   max-width: 800px;
   margin: 0 auto 30px;
-  padding-left: 40px;
+  padding: 20px 25px;
+  background-color: #FAEDCD;
+  border: 2px dashed #D4A373;        /* borda tracejada */
+  border-radius: 20px;
+  list-style: none;                  /* remove os marcadores padrão */
 }
 
 ul li {
-  margin-bottom: 10px;
-  font-size: 17px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  padding: 8px 12px;
+  background-color: #FFF9F0;
+  border-radius: 15px;
+  border: 1px solid #F0D9B5;
+  transition: all 0.2s ease;
 }
 
-footer {
-  background-color: #86531A;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+ul li:hover {
+  background-color: #FFF0E0;
+  transform: translateX(5px);        /* desliza suavemente ao passar o mouse */
 }
 
-.titulo {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
+/* ===== IMAGENS ===== */
 picture img {
   display: block;
   margin: 20px auto;
   max-width: 100%;
+  border: 6px solid #E6C9A8;
+  border-radius: 25px;              /* moldura arredondada */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
+/* ===== BOTÃO ===== */
 .botao-area {
   text-align: center;
   margin-top: 20px;
@@ -92,25 +139,45 @@ picture img {
 
 .botao-download {
   display: inline-block;
-  background-color: #222;
+  background-color: #BC6C25;
   color: white;
   text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
+  padding: 14px 28px;
+  border-radius: 50px;              /* formato de pílula */
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid #BC6C25;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(188, 108, 37, 0.3);
 }
 
 .botao-download:hover {
-  background-color: #ff0055;
-  color: #fffefe;
+  background-color: #FFFFFF;
+  color: #BC6C25;
+  border-color: #BC6C25;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(188, 108, 37, 0.4);
 }
- 
-.sobre.html, .historia.html {
-  background-color: #F5E6C4;
+
+/* ===== RODAPÉ ===== */
+footer {
+  background-color: #E6C9A8;
+  color: #6B4F4F;
+  text-align: center;
   padding: 20px;
-  border-radius: 8px;
+  margin-top: 40px;
+  border-top: 4px solid #D4A373;
+  font-weight: 600;
+  border-radius: 30px 30px 0 0;     /* cantos superiores arredondados */
+}
+
+/* ===== CLASSE PARA PÁGINAS SOBRE/HISTORIA (se usar) ===== */
+.sobre.html, .historia.html {
+  background-color: #FFF9F0;
+  padding: 20px;
+  border-radius: 25px;
   margin: 20px auto;
   max-width: 800px;
-  
+  border: 2px solid #F0D9B5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
